@@ -53,7 +53,7 @@ namespace Sandbox
         {
             if (this.balance - WithdrawAmount < 0)
             {
-                Console.WriteLine("Overtræk. Du kan hæve op til {0} kr", balance);
+                Console.WriteLine("You are trying to withdraw to much money. You can withdraw a maximum of {0} £", balance);
                 Console.WriteLine();
             }
 
@@ -67,7 +67,7 @@ namespace Sandbox
         public void PrintInformation()
         {
             Console.WriteLine("Account no {0} is owned by {1}.", accountno, name);
-            Console.WriteLine("The balance of the account is {0} kr", balance);
+            Console.WriteLine("The balance of the account is {0} £", balance);
             Console.WriteLine();
         }
     }
