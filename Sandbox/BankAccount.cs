@@ -63,16 +63,17 @@ namespace Sandbox
         // Method for withdraw
         public void Withdraw(double WithdrawAmount)
         {
-            if (this.balance - WithdrawAmount < 0)
-            {
+            if (!creditGranted && this.balance - WithdrawAmount < 0)
+            { 
                 Console.WriteLine("You are trying to withdraw to much money. You can withdraw a maximum of {0} £", balance);
                 Console.WriteLine();
             }
 
-            else if (creditGranted == true && this.balance - WithdrawAmount < 0)
+            else if (creditGranted && this.balance - WithdrawAmount < 0)
             {
                 this.balance = this.balance - WithdrawAmount;
                 Console.WriteLine("You are now using your credit!");
+                Console.WriteLine();
             }
 
             else
