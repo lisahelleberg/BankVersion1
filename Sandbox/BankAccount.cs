@@ -12,14 +12,16 @@ namespace Sandbox
         private double balance;
         private int accountno;
         private bool accountIsNegative;
+        public bool credit;
 
         // Constructor
-        public BankAccount(string name, double balance, int accountno)
+        public BankAccount(string name, double balance, int accountno, bool credit)
         {
             this.name = name;
             this.balance = balance;
             this.accountno = accountno;
             this.accountIsNegative = false;
+            this.credit = false;
         }
 
         public string GetName()
