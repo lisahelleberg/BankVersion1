@@ -9,11 +9,11 @@ namespace Sandbox
     {
         // Instance fields
         private string name;
-        private double balance;
+        private double balance = 0;
         private int accountno;
 
         // Constructor
-        public BankAccount()
+        public BankAccount(string name, double balance, int accountno)
         {
             this.name = name;
             this.balance = balance;
@@ -50,7 +50,8 @@ namespace Sandbox
         // Printout
         public void PrintInformation()
         {
-            Console.WriteLine("Account no {0} is owned by {1}", accountno, name);
+            Console.WriteLine("Account no {0} is owned by {1}.", accountno, name);
+            Console.WriteLine("The balance of th account is {0}", balance);
         }
     }
 
