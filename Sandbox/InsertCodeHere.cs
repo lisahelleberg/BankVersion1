@@ -23,7 +23,7 @@ namespace Sandbox
 
             //account1.Withdraw(90);
 
-            account2.SetCreditGranted();
+            account2.SetCreditGranted(-5000);
 
             //account1.PrintInformation();
             account2.PrintInformation();

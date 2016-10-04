@@ -13,6 +13,7 @@ namespace Sandbox
         private int accountno;
         private bool accountIsNegative;
         public bool creditGranted;
+        public double creditMax;
 
         // Constructor
         public BankAccount(string name, double balance, int accountno)
@@ -22,6 +23,7 @@ namespace Sandbox
             this.accountno = accountno;
             this.accountIsNegative = false;
             this.creditGranted = false;
+            this.creditMax = creditMax;
         }
 
         public string GetName()
@@ -45,10 +47,10 @@ namespace Sandbox
         }
 
         // Credit granted
-        public void SetCreditGranted()
+        public void SetCreditGranted(double creditMax)
         {
             this.creditGranted = true;
-            Console.WriteLine("You have been granted a credit, {0}!", name);
+            Console.WriteLine("You have been granted a credit of {0} £, {1}!", creditMax, name);
             Console.WriteLine();
         }
         
@@ -73,6 +75,7 @@ namespace Sandbox
             {
                 this.balance = this.balance - WithdrawAmount;
                 Console.WriteLine("You are now using your credit!");
+                Console.WriteLine("You have {0} £ left to use", (creditMax - WithdrawAmount));
                 Console.WriteLine();
             }
 
