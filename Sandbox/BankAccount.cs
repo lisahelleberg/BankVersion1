@@ -9,8 +9,9 @@ namespace Sandbox
     {
         // Instance fields
         private string name;
-        private double balance = 0;
+        private double balance;
         private int accountno;
+        private bool accountIsNegative;
 
         // Constructor
         public BankAccount(string name, double balance, int accountno)
@@ -18,6 +19,7 @@ namespace Sandbox
             this.name = name;
             this.balance = balance;
             this.accountno = accountno;
+            this.accountIsNegative = false;
         }
 
         public string GetName()
@@ -35,6 +37,11 @@ namespace Sandbox
             return accountno;
         }
 
+        public bool GetAccountIsNegative()
+        {
+            return accountIsNegative;
+        }
+
         // Method for deposit
         public void Deposit(double DepositAmount)
         {
@@ -44,7 +51,15 @@ namespace Sandbox
         // Method for withdraw
         public void Withdraw(double WithdrawAmount)
         {
-            this.balance = this.balance - WithdrawAmount;
+            if (this.balance - WithdrawAmount < 0)
+            {
+                Console.WriteLine("Overtræk. Du kan hæve op til {0}", balance);
+            }
+
+            else
+            {
+                this.balance = this.balance - WithdrawAmount;
+            }
         }
 
         // Printout
