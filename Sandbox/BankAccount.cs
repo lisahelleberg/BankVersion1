@@ -48,6 +48,8 @@ namespace Sandbox
         public void SetCreditGranted()
         {
             this.creditGranted = true;
+            Console.WriteLine("You have been granted a credit {0}!", name);
+            Console.WriteLine();
         }
         
         // Method for deposit
@@ -65,11 +67,18 @@ namespace Sandbox
                 Console.WriteLine();
             }
 
+            else if (creditGranted == true && this.balance - WithdrawAmount < 0)
+            {
+                this.balance = this.balance - WithdrawAmount;
+                Console.WriteLine("You are now using your credit!");
+            }
+
             else
             {
                 this.balance = this.balance - WithdrawAmount;
             }
         }
+
 
         // Printout
         public void PrintInformation()
