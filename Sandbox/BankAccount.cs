@@ -36,15 +36,15 @@ namespace Sandbox
         }
 
         // Method for deposit
-        public void Deposit()
+        public void Deposit(double DepositAmount)
         {
-
+            this.balance = this.balance + DepositAmount;
         }
 
         // Method for withdraw
-        public void Withdraw()
+        public void Withdraw(double WithdrawAmount)
         {
-
+            this.balance = this.balance - WithdrawAmount;
         }
 
         // Printout
