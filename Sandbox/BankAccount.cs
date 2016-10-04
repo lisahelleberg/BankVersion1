@@ -51,7 +51,8 @@ namespace Sandbox
         public void PrintInformation()
         {
             Console.WriteLine("Account no {0} is owned by {1}.", accountno, name);
-            Console.WriteLine("The balance of th account is {0}", balance);
+            Console.WriteLine("The balance of the account is {0}", balance);
+            Console.WriteLine();
         }
     }
 

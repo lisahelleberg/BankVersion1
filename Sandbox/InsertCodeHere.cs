@@ -12,8 +12,10 @@ namespace Sandbox
 
             account1.PrintInformation();
 
-            
+            account1.Deposit(50);
+            account1.Deposit(180);
 
+            account1.PrintInformation();
 
 
             // The LAST line of code should be ABOVE this line
