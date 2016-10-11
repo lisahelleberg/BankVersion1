@@ -23,10 +23,10 @@ namespace Sandbox
 
             //account1.Withdraw(90);
 
-            account2.SetCreditGranted(-5000);
+            //account2.SetCreditGranted(-5000);
 
             //account1.PrintInformation();
-            account2.PrintInformation();
+            //account2.PrintInformation();
 
             //account1.Withdraw(200);
             account2.Withdraw(150);
@@ -36,7 +36,7 @@ namespace Sandbox
             account2.Withdraw(200);
 
             //account1.PrintInformation();
-            account2.PrintInformation();
+            //account2.PrintInformation();
 
             // The LAST line of code should be ABOVE this line
         }

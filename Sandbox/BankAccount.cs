@@ -50,7 +50,7 @@ namespace Sandbox
         public void SetCreditGranted(double creditMax)
         {
             this.creditGranted = true;
-            Console.WriteLine("You have been granted a credit of {0} £, {1}!", creditMax, name);
+            Console.WriteLine("You have been granted a credit, {1}!", creditMax, name);
             Console.WriteLine();
         }
         
@@ -75,7 +75,7 @@ namespace Sandbox
             {
                 this.balance = this.balance - WithdrawAmount;
                 Console.WriteLine("You are now using your credit!");
-                Console.WriteLine("You have {0} £ left to use", (creditMax - WithdrawAmount));
+                //Console.WriteLine("You have {0} £ left to use", (creditMax - WithdrawAmount));
                 Console.WriteLine();
             }
 
